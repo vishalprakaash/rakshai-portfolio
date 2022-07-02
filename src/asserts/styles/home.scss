@@ -1,3 +1,35 @@
 .home_page {
   background-color: black;
+  .home_wrapper {
+    .img_wrapper {
+      position: relative;
+      max-width: max-content;
+      img {
+        width: 300px;
+        height: auto;
+      }
+      .overflow_wrapper {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: #00000069;
+        width: 100%;
+        opacity: 0;
+        h4 {
+          color: #fff;
+          position: absolute;
+          bottom: 20px;
+          left: 20px;
+          font-weight: 700;
+        }
+      }
+      &:hover {
+        .overflow_wrapper {
+          opacity: 1;
+        }
+      }
+    }
+  }
 }

@@ -1,17 +1,22 @@
+import React, { useState } from 'react'
 import {
   faFacebookF,
   faInstagram,
   faBehance
 } from "@fortawesome/free-brands-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from "gatsby";
 import { StaticImage } from 'gatsby-plugin-image'
-import React from 'react'
 
 const Header = () => {
+  const [toggle, setToggle] = useState(false);
   return (
-    <header className="nav_header">
-      <StaticImage placeholder='blurred' src="../../static/images/sampleLogo.jpg" alt='logo' />
+    <header className={`nav_header ${toggle ? "toggle_mode" : ""}`}>
+      <div className="nav_brand">
+        <StaticImage placeholder='blurred' src="../../static/images/sampleLogo.jpg" alt='logo' />
+        <FontAwesomeIcon icon={faBars} onClick={() => setToggle(prev => !prev)} />
+      </div>
       <ul className="header_menu">
         <li><Link to="/" activeClassName="active_menu">WORK</Link></li>
         <li><Link to="/about" activeClassName="active_menu">ABOUT</Link></li>
