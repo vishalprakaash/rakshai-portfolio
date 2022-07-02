@@ -1,12 +1,18 @@
 .home_page {
   background-color: black;
+  padding-bottom: 2rem;
+  font-family: "Ubuntu", sans-serif;
   .home_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 2rem 0;
+
     .img_wrapper {
       position: relative;
-      max-width: max-content;
+      max-width: 100%;
       img {
-        width: 300px;
-        height: auto;
+        width: 100%;
+        height: 250px;
       }
       .overflow_wrapper {
         position: absolute;
@@ -29,6 +35,32 @@
         .overflow_wrapper {
           opacity: 1;
         }
+      }
+    }
+    @media (max-width: 979px) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    @media (max-width: 779px) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: 579px) {
+      grid-template-columns: 1fr;
+      .img_wrapper {
+        img {
+          height: auto;
+        }
+      }
+    }
+  }
+  .scroll_area {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+    button {
+      background: none;
+      color: #888;
+      &:hover {
+        color: #fff;
       }
     }
   }

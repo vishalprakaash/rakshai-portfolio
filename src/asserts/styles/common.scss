@@ -7,7 +7,7 @@
 }
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .nav_header {
   display: flex;
@@ -42,9 +42,12 @@ body {
       font-weight: 300;
       a {
         text-decoration: none;
-        color: #fff;
+        color: #888;
         &.active_menu {
-          color: #ffc107;
+          color: #fff;
+        }
+        &:hover {
+          color: #fff;
         }
       }
       svg {
