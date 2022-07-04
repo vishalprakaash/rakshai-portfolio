@@ -1,0 +1,20 @@
+body {
+  background-color: black;
+}
+.about_wrapper {
+  background: black;
+  .title_wrapper {
+    padding: 1rem 0 3rem;
+    color: #cfcfcf;
+    text-align: center;
+    h3 {
+      font-size: 3rem;
+      text-decoration: underline;
+      padding-bottom: 1rem;
+      text-underline-position: under;
+    }
+    p {
+      font-size: 1.5rem;
+    }
+  }
+}
